@@ -24,5 +24,32 @@ namespace Tema3_CalculadoraEstilos
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if (button.Equals(boton1))
+                recuadroMuestraNumero.Text += "1";
+            else if (button.Equals(boton2))
+                recuadroMuestraNumero.Text += "2";
+            else if (button.Equals(boton3))
+                recuadroMuestraNumero.Text += "3";
+            else if (button.Equals(boton4))
+                recuadroMuestraNumero.Text += "4";
+            else if (button.Equals(boton5))
+                recuadroMuestraNumero.Text += "5";
+            else if (button.Equals(boton6))
+                recuadroMuestraNumero.Text += "6";
+            else if (button.Equals(boton7))
+                recuadroMuestraNumero.Text += "7";
+            else if (button.Equals(boton8))
+                recuadroMuestraNumero.Text += "8";
+            else if (button.Equals(boton9))
+                recuadroMuestraNumero.Text += "9";
+            else if (button.Equals(boton0))
+                recuadroMuestraNumero.Text += "0";
+
+
+        }
     }
 }

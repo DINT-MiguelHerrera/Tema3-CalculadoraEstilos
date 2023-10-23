@@ -6,7 +6,107 @@
         xmlns:local="clr-namespace:Tema3_CalculadoraEstilos"
         mc:Ignorable="d"
         Title="Calculadora Estilos" Height="550" Width="450">
-    
+    <Window.Resources>
+        <Style TargetType="Border" x:Key="BordeSalidaNumeros">
+            <Setter Property="Grid.Row" Value="0"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
+            <Setter Property="BorderBrush" Value="Gray"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style TargetType="Viewbox" x:Key="ViewBoxMuestraNumero">
+            <Setter Property="Stretch" Value="Uniform"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlockMuestraNumero">
+            <Setter Property="FontSize" Value="72"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton1">
+            <Setter Property="Content" Value="1"></Setter>
+            <Setter Property="Grid.Row" Value="1"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton2">
+            <Setter Property="Content" Value="2"></Setter>
+            <Setter Property="Grid.Row" Value="1"></Setter>
+            <Setter Property="Grid.Column" Value="1"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton3">
+            <Setter Property="Content" Value="3"></Setter>
+            <Setter Property="Grid.Row" Value="1"></Setter>
+            <Setter Property="Grid.Column" Value="2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton4">
+            <Setter Property="Content" Value="4"></Setter>
+            <Setter Property="Grid.Row" Value="2"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton5">
+            <Setter Property="Content" Value="5"></Setter>
+            <Setter Property="Grid.Row" Value="2"></Setter>
+            <Setter Property="Grid.Column" Value="1"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton6">
+            <Setter Property="Content" Value="6"></Setter>
+            <Setter Property="Grid.Row" Value="2"></Setter>
+            <Setter Property="Grid.Column" Value="2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton7">
+            <Setter Property="Content" Value="7"></Setter>
+            <Setter Property="Grid.Row" Value="3"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton8">
+            <Setter Property="Content" Value="8"></Setter>
+            <Setter Property="Grid.Row" Value="3"></Setter>
+            <Setter Property="Grid.Column" Value="1"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton9">
+            <Setter Property="Content" Value="9"></Setter>
+            <Setter Property="Grid.Row" Value="3"></Setter>
+            <Setter Property="Grid.Column" Value="2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Boton0">
+            <Setter Property="Content" Value="0"></Setter>
+            <Setter Property="Grid.Row" Value="4"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="190*"></RowDefinition>
@@ -20,20 +120,20 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Gray" BorderThickness="1" Margin="10,10,10,10" >
-            <Viewbox Stretch="Uniform" HorizontalAlignment="Right" VerticalAlignment="Center">
-                <TextBlock x:Name="recuadroMuestraNumero" FontSize="72" FontWeight="Bold"></TextBlock>
+        <Border Style="{StaticResource BordeSalidaNumeros}">
+            <Viewbox Style="{StaticResource ViewBoxMuestraNumero}">
+                <TextBlock x:Name="recuadroMuestraNumero" Style="{StaticResource TextBlockMuestraNumero}"></TextBlock>
             </Viewbox>
         </Border>
-        <Button x:Name="boton1" Content="1" Grid.Row="1" Grid.Column="0" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton2" Content="2" Grid.Row="1" Grid.Column="1" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton3" Content="3" Grid.Row="1" Grid.Column="2" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton4" Content="4" Grid.Row="2" Grid.Column="0" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton5" Content="5" Grid.Row="2" Grid.Column="1" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton6" Content="6" Grid.Row="2" Grid.Column="2" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton7" Content="7" Grid.Row="3" Grid.Column="0" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton8" Content="8" Grid.Row="3" Grid.Column="1" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton9" Content="9" Grid.Row="3" Grid.Column="2" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
-        <Button x:Name="boton0" Content="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Click="Button_Click" Margin="5" FontSize="36" FontWeight="Bold"></Button>
+        <Button x:Name="boton1" Click="Button_Click" Style="{StaticResource Boton1}"></Button>
+        <Button x:Name="boton2" Click="Button_Click" Style="{StaticResource Boton2}"></Button>
+        <Button x:Name="boton3" Click="Button_Click" Style="{StaticResource Boton3}"></Button>
+        <Button x:Name="boton4" Click="Button_Click" Style="{StaticResource Boton4}"></Button>
+        <Button x:Name="boton5" Click="Button_Click" Style="{StaticResource Boton5}"></Button>
+        <Button x:Name="boton6" Click="Button_Click" Style="{StaticResource Boton6}"></Button>
+        <Button x:Name="boton7" Click="Button_Click" Style="{StaticResource Boton7}"></Button>
+        <Button x:Name="boton8" Click="Button_Click" Style="{StaticResource Boton8}"></Button>
+        <Button x:Name="boton9" Click="Button_Click" Style="{StaticResource Boton9}"></Button>
+        <Button x:Name="boton0" Click="Button_Click" Style="{StaticResource Boton0}"></Button>
     </Grid>
 </Window>
